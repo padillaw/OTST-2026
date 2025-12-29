@@ -9,38 +9,48 @@
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
     <meta name="KeyWords" content="Conference, Program, Schedule">
-    <title>Conference Template - Program</title>
+    <title>OTST 2026 - Program</title>
+    
     <style>
+        /* CSS Spacing Fix for Navigation Bar */
+        table.navigation {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table.navigation td {
+            padding: 10px 15px; /* Adds space between menu items */
+            text-align: center;
+            white-space: nowrap; /* Prevents text wrapping in the menu */
+        }
+
         .keynote-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
         }
         .keynote-table td {
-            padding: 15px 0; /* Increased padding for better separation */
+            padding: 15px 0; 
             border-bottom: 1px solid #eee;
             vertical-align: top;
         }
         .image-container {
-            /* Defines a square container for the image */
             width: 90px;
             height: 90px; 
-            overflow: hidden; /* THIS IS THE CROPPING MECHANISM */
+            overflow: hidden; 
             display: inline-block;
             margin-right: 20px;
         }
         .keynote-table img {
-            /* The image inside the container will fill the container, 
-               maintaining aspect ratio, and any excess will be hidden (cropped) */
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the image covers the entire 90x90 area */
+            object-fit: cover; 
             display: block;
             border-radius: 0; 
             box-shadow: none;
         }
         .keynote-table td:first-child {
-            width: 110px; /* Allocate space for the 90px image container + padding */
+            width: 110px; 
         }
         .keynote-name a {
             font-weight: bold;
@@ -52,13 +62,73 @@
             display: block;
             margin-bottom: 5px;
         }
+
+        /* Tutorial Grid Styling */
+        .tutorial-grid {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px; 
+            margin-bottom: 30px;
+        }
+        .tutorial-item {
+            width: 50%;
+            text-align: center;
+            vertical-align: top;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .tutorial-image-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px auto;
+            overflow: hidden;
+            display: block;
+        }
+        .tutorial-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .tutorial-info {
+            font-size: 0.95em;
+        }
+        .tutorial-name a {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #003366;
+            text-decoration: none;
+        }
+        .tutorial-name a:hover {
+            text-decoration: underline;
+        }
+        .abstract-toggle {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #0056b3;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .abstract-content {
+            display: none;
+            text-align: left;
+            font-size: 0.85em;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="banner">
-        <img src="assets/banner.jpg" alt="Conference Template Banner">
+        <img src="assets/banner.jpg" alt="OTST 2026 Banner">
         <div class="top-left">
             <span class="title1">OT</span><span class="title2">ST</span> <span class="year">2026</span>
         </div>
@@ -82,7 +152,7 @@
                 <a class="current" title="Conference Program" href="program.html">Program</a>
             </td>
             <td class="navigation">
-                <a title="Directions to the Conference" href="directions.html">Directions</a>
+                <a title="Travel, Lodging, and Venue" href="directions.html">Travel & Venue</a>
             </td>
             <td class="navigation">
                 <a title="Conference Flyer" href="flyer.html">Flyer</a>
@@ -95,6 +165,93 @@
         Welcome to the program page for OTST 2026. Here you will find the schedule of talks, poster sessions, and other events.
         The program is subject to change. Please check back regularly for updates.
     </p>
+
+    <h3>Tutorial Talks</h3>
+    <table class="tutorial-grid">
+        <tr>
+            <td class="tutorial-item">
+                <div class="tutorial-image-container">
+                    <img src="assets/X_Zhang.jpg" alt="X.C. Zhang">
+                </div>
+                <div class="tutorial-info">
+                    <span class="tutorial-name">
+                        <a href="https://www.hajim.rochester.edu/optics/people/faculty/zhang_xi-cheng/" target="_blank">X.C. Zhang</a>
+                    </span>
+                    The University of Rochester <br>
+                    <div class="abstract-toggle" onclick="toggleAbstract('abs1')">
+                        Topic: THz liquid photonics
+                    </div>
+                    <div id="abs1" class="abstract-content">
+                        This tutorial will cover recent progress in THz liquid photonics—an extension of our previous research on THz air photonics. Investigating THz generation from liquids may complete the final piece of the matter-phase puzzle in THz photonics.
+                    </div>
+                </div>
+            </td>
+            <td class="tutorial-item">
+                <div class="tutorial-image-container">
+                    <img src="assets/A_Markelz.jpg" alt="Andrea Markelz">
+                </div>
+                <div class="tutorial-info">
+                    <span class="tutorial-name">
+                        <a href="https://arts-sciences.buffalo.edu/physics/faculty/andrea-markelz.html" target="_blank">Andrea Markelz</a>
+                    </span>
+                    The University at Buffalo <br>
+                    <div class="abstract-toggle" onclick="toggleAbstract('abs2')">
+                        Topic: To be Announced
+                    </div>
+                    <div id="abs2" class="abstract-content">
+                        Abstract details for Professor Markelz's tutorial will be posted here shortly.
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tutorial-item">
+                <div class="tutorial-image-container">
+                    <img src="assets/B_Speaker.jpg" alt="Tutorial Speaker 3">
+                </div>
+                <div class="tutorial-info">
+                    <span class="tutorial-name">
+                        <a href="#" target="_blank">Speaker Name</a>
+                    </span>
+                    Institution Name <br>
+                    <div class="abstract-toggle" onclick="toggleAbstract('abs3')">
+                        Topic: To be Announced
+                    </div>
+                    <div id="abs3" class="abstract-content">
+                        Abstract placeholder for Speaker 3.
+                    </div>
+                </div>
+            </td>
+            <td class="tutorial-item">
+                <div class="tutorial-image-container">
+                    <img src="assets/A_Speaker.jpg" alt="Tutorial Speaker 4">
+                </div>
+                <div class="tutorial-info">
+                    <span class="tutorial-name">
+                        <a href="#" target="_blank">Speaker Name</a>
+                    </span>
+                    Institution Name <br>
+                    <div class="abstract-toggle" onclick="toggleAbstract('abs4')">
+                        Topic: To be Announced
+                    </div>
+                    <div id="abs4" class="abstract-content">
+                        Abstract placeholder for Speaker 4.
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function toggleAbstract(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 
     <h3>Keynote Speakers</h3>
     <table class="keynote-table">
@@ -121,7 +278,7 @@
                 <div class="keynote-name">
                     <a href="https://www.puls.ruhr-uni-bochum.de/puls/aboutus/clarasaraceno.html.en" target="_blank">Clara Saraceno</a>
                 </div>
-                Ruhr University Bochum, Germany (Topic: To be Announced)
+                Ruhr University Bochum, Germany (Title: New directions in high average power, ultrafast laser-driven THz sources)
             </td>
         </tr>
         <tr>
@@ -379,7 +536,7 @@
 
     <footer>
         © Conference Organizers
-         |  Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
+        &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
     </footer>
 
 </body>

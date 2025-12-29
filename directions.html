@@ -5,17 +5,62 @@
     <base href=".">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
     <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
-    <meta name="description" content="Conference Template - Directions">
+    <meta name="description" content="Conference Template - Travel and Venue">
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
-    <meta name="KeyWords" content="Conference, Directions, Location, Travel, Venue">
-    <title>Conference Template - Directions</title>
+    <meta name="KeyWords" content="Conference, Directions, Location, Travel, Venue, Hotel, Durham">
+    <title>OTST 2026 - Travel & Venue</title>
+
+    <style>
+        /* CSS Spacing Fix for Navigation Bar */
+        table.navigation {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table.navigation td {
+            padding: 10px 15px; /* Adds space between menu items */
+            text-align: center;
+            white-space: nowrap; /* Prevents text wrapping in the menu */
+        }
+
+        /* Styling for the Accommodation section */
+        .accommodation-container {
+            margin: 20px 0 40px 0;
+            line-height: 1.6;
+        }
+        .hotel-info-card {
+            background-color: #f4f7f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #e1e8ed; 
+        }
+        .booking-button {
+            display: inline-block;
+            background-color: #003366;
+            color: white !important;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .booking-button:hover {
+            background-color: #0056b3;
+        }
+        .booking-options {
+            border-top: 1px solid #ccc;
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="banner">
-        <img src="assets/banner.jpg" alt="Conference Template Banner">
+        <img src="assets/banner.jpg" alt="OTST 2026 Banner">
         <div class="top-left">
             <span class="title1">OT</span><span class="title2">ST</span> <span class="year">2026</span>
         </div>
@@ -39,7 +84,7 @@
                 <a title="Conference Program" href="program.html">Program</a>
             </td>
             <td class="navigation">
-                <a class="current" title="Directions to the Conference" href="directions.html">Directions</a>
+                <a class="current" title="Travel, Lodging, and Venue" href="directions.html">Travel & Venue</a>
             </td>
             <td class="navigation">
                 <a title="Conference Flyer" href="flyer.html">Flyer</a>
@@ -47,19 +92,44 @@
         </tr>
     </table>
 
-    <h2>Directions & Venue Information</h2>
+    <h2>Travel & Venue Information</h2>
     <p>
         The 11th International Conference on Optical Terahertz Science and Technology (OTST 2026) will be held at the
         <strong>JB Duke Hotel</strong>, located on the campus of Duke University in Durham, North Carolina, USA.
     </p>
 
-    <h3>Conference Venue Address</h3>
-    <p>
-        JB Duke Hotel<br>
-        230 Science Drive<br>
-        Durham, NC 27708, USA<br>
-        Website: <a href="https://www.jbdukehotel.com/" target="_blank">www.jbdukehotel.com</a>
-    </p>
+    <div class="accommodation-container">
+        <h3>Official Conference Hotel & Lodging</h3>
+        <p>
+            We have negotiated a special group rate for OTST 2026 attendees at the <strong>JB Duke Hotel</strong>, 
+            conveniently located on Duke’s West Campus.
+        </p>
+
+        <div class="hotel-info-card">
+            <p><strong>JB Duke Hotel</strong><br>
+            230 Science Drive, Durham, North Carolina 27708</p>
+            
+            <p><strong>Group Rate Cutoff:</strong> Friday, March 20th, 2026</p>
+            
+            <div class="booking-options">
+                <a href="https://reservations.travelclick.com/99471?groupID=4719796" target="_blank" class="booking-button">
+                    Book Online (Group Rate)
+                </a>
+                <p style="margin-top: 15px;">
+                    <strong>To Book by Phone:</strong><br>
+                    Call (919) 660-6400 and request <strong>Reservations</strong>.
+                </p>
+                <p>
+                    <strong>Group Reference:</strong><br>
+                    Please reference <strong>Optical Terahertz Science & Technology (Group ID #1131975)</strong>.
+                </p>
+            </div>
+        </div>
+        
+        <p style="font-size: 0.85em; color: #666; font-style: italic; margin-top: 10px;">
+            Note: The online booking link may not be supported on all mobile devices; a desktop browser is recommended.
+        </p>
+    </div>
 
     <h3>Getting to Durham, NC</h3>
     <h4>By Air</h4>
@@ -69,48 +139,22 @@
     </p>
     <p>
         Transportation options from RDU to the JB Duke Hotel:
-        <ul>
-            <li><strong>Taxi:</strong> Available at the airport terminals. Estimated cost: $42 - $52 USD. (e.g., <a href="http://www.taxitaxiofraleigh.com/rates/" target="_blank">Taxi Taxi of Raleigh</a>)</li>
-            <li><strong>Ride-sharing (Uber/Lyft):</strong> Available through their respective apps. Estimated cost: $24 - $35 USD. (e.g., <a href="https://www.uber.com/global/en/price-estimate/" target="_blank">Uber Price Estimator</a>)</li>
-            <li><strong>Rental Cars:</strong> Several rental car agencies operate at RDU.</li>
-            <li><strong>Shuttle Services:</strong> Some shuttle services may be available; please check with the airport or your hotel.</li>
-        </ul>
     </p>
-
-    <h4>By Car</h4>
-    <p>
-        Durham is accessible via major highways, including I-40 and I-85.
-        Please use the interactive map below for the best route to the JB Duke Hotel.
-    </p>
-    <div style="width: 100%; max-width: 600px; margin: 20px auto;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3227.9350478598835!2d-78.94968862364674!3d35.99745361253756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ace6b973b8fedd%3A0xf84dbd98be9b4764!2sJB%20Duke%20Hotel!5e0!3m2!1sen!2sus!4v1748868921207!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p style="text-align:center;"><a href="https://maps.app.goo.gl/9EJvtPfgHkf8Rimq8" target="_blank">View on Google Maps</a></p>
-    </div>
-
+    <ul>
+        <li><strong>Taxi:</strong> Available at the airport terminals. Estimated cost: $42 - $52 USD. (<a href="http://www.taxitaxiofraleigh.com/rates/" target="_blank">Taxi Taxi of Raleigh</a>)</li>
+        <li><strong>Ride-sharing (Uber/Lyft):</strong> Available through their respective apps. Estimated cost: $24 - $35 USD. (<a href="https://www.uber.com/global/en/price-estimate/" target="_blank">Uber Price Estimator</a>)</li>
+        <li><strong>Rental Cars:</strong> Several rental car agencies operate at RDU.</li>
+    </ul>
 
     <h3>Parking</h3>
     <p>
         For guests staying at the JB Duke Hotel, parking is included with your room.
-        For conference attendees not staying at the hotel, parking is available at a rate of $15 USD per day. Please follow signs for event parking.
-    </p>
-
-    <h3>Public Transportation</h3>
-    <p>
-        Durham offers public bus services through GoDurham. For routes and schedules, please visit the
-        <a href="https://godurhamtransit.org/" target="_blank">GoDurham website</a>.
-        Duke University also has its own <a href="https://parking.duke.edu/buses/" target="_blank">bus system</a> that serves the campus.
-    </p>
-
-    <h3>Accommodation</h3>
-    <p>
-        A block of rooms has been reserved at the JB Duke Hotel for conference attendees at a special rate.
-        Please visit the <a href="registration.html">Registration</a> page for booking details and deadlines.
-        Other hotels are also available in the Durham area.
+        For conference attendees not staying at the hotel, parking is available at a rate of $15 USD per day.
     </p>
 
     <footer>
-        © Conference Organizers
-         |  Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
+        &copy; Conference Organizers
+        &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
     </footer>
 
 </body>
