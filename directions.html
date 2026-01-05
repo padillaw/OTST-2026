@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
     <base href=".">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
     <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
-    <meta name="description" content="Conference Template - Travel and Venue">
-    <meta name="resource-type" content="document">
-    <meta name="distribution" content="global">
-    <meta name="KeyWords" content="Conference, Directions, Location, Travel, Venue, Hotel, Durham">
-    <title>OTST 2026 - Travel & Venue</title>
-
+    <title>OTST 2026 - Venue & Excursions</title>
     <style>
-        /* CSS Spacing Fix for Navigation Bar */
-        table.navigation {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
+        /* Navigation Styling */
+        table.navigation { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-bottom: 20px; 
         }
-        table.navigation td {
-            padding: 10px 15px; /* Adds space between menu items */
-            text-align: center;
-            white-space: nowrap; /* Prevents text wrapping in the menu */
+        table.navigation td { 
+            padding: 10px 15px; 
+            text-align: center; 
+            white-space: nowrap; /* Keep menu items on one line */
         }
-
-        /* Styling for the Accommodation section */
-        .accommodation-container {
-            margin: 20px 0 40px 0;
-            line-height: 1.6;
-        }
-        .hotel-info-card {
-            background-color: #f4f7f9;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
+        
+        /* Venue Card Styling */
+        .info-card { 
+            background-color: #f4f7f9; 
+            padding: 20px; 
+            margin: 20px 0; 
+            border-radius: 8px; 
             border: 1px solid #e1e8ed; 
         }
-        .booking-button {
-            display: inline-block;
-            background-color: #003366;
-            color: white !important;
-            padding: 12px 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            margin-top: 10px;
+
+        /* FINAL BLOCK-BASED EXCURSION STYLING */
+        .excursion-container {
+            margin-top: 20px;
+            width: 100%;
         }
-        .booking-button:hover {
-            background-color: #0056b3;
+
+        .excursion-item { 
+            background: #fff; 
+            border: 1px solid #ddd; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-bottom: 15px; /* Adds space between stacked boxes */
+            box-sizing: border-box !important; 
+            
+            /* FORCING TEXT WRAP */
+            display: block !important;
+            white-space: normal !important; 
+            word-wrap: break-word !important; 
+            overflow-wrap: break-word !important;
+            width: 100% !important;
+            clear: both;
         }
-        .booking-options {
-            border-top: 1px solid #ccc;
-            margin-top: 15px;
-            padding-top: 15px;
+
+        .excursion-item h4 { 
+            margin-top: 0; 
+            margin-bottom: 10px;
+            color: #003366; 
+            white-space: normal !important; 
+            display: block !important;
+        }
+
+        .excursion-item p {
+            line-height: 1.6;
+            margin: 0;
+            white-space: normal !important; 
+            display: block !important;
+            word-break: normal !important;
         }
     </style>
 </head>
-
 <body>
-
     <div class="banner">
         <img src="assets/banner.jpg" alt="OTST 2026 Banner">
         <div class="top-left">
@@ -71,91 +79,55 @@
 
     <table class="navigation">
         <tr>
-            <td class="navigation">
-                <a title="Conference Home Page" href="index.html">Home</a>
-            </td>
-            <td class="navigation">
-                <a title="Register for the Conference" href="registration.html">Registration</a>
-            </td>
-            <td class="navigation">
-                <a title="Submit an Abstract" href="abstract_submission.html">Abstract</a>
-            </td>
-            <td class="navigation">
-                <a title="Conference Program" href="program.html">Program</a>
-            </td>
-            <td class="navigation">
-                <a class="current" title="Travel, Lodging, and Venue" href="directions.html">Travel & Venue</a>
-            </td>
-            <td class="navigation">
-                <a title="Conference Flyer" href="flyer.html">Flyer</a>
-            </td>
+            <td class="navigation"><a title="Home" href="index.html">Home</a></td>
+            <td class="navigation"><a title="Registration" href="registration.html">Registration</a></td>
+            <td class="navigation"><a title="Submissions" href="submissions.html">Submissions</a></td>
+            <td class="navigation"><a title="Program" href="program.html">Program</a></td>
+            <td class="navigation"><a class="current" title="Venue & Excursions" href="directions.html">Venue & Excursions</a></td>
         </tr>
     </table>
 
-    <h2>Travel & Venue Information</h2>
-    <p>
-        The 11th International Conference on Optical Terahertz Science and Technology (OTST 2026) will be held at the
-        <strong>JB Duke Hotel</strong>, located on the campus of Duke University in Durham, North Carolina, USA.
-    </p>
-
-    <div class="accommodation-container">
-        <h3>Official Conference Hotel & Lodging</h3>
-        <p>
-            We have negotiated a special group rate for OTST 2026 attendees at the <strong>JB Duke Hotel</strong>, 
-            conveniently located on Duke’s West Campus.
-        </p>
-
-        <div class="hotel-info-card">
-            <p><strong>JB Duke Hotel</strong><br>
-            230 Science Drive, Durham, North Carolina 27708</p>
-            
-            <p><strong>Group Rate Cutoff:</strong> Friday, March 20th, 2026</p>
-            
-            <div class="booking-options">
-                <a href="https://reservations.travelclick.com/99471?groupID=4719796" target="_blank" class="booking-button">
-                    Book Online (Group Rate)
-                </a>
-                <p style="margin-top: 15px;">
-                    <strong>To Book by Phone:</strong><br>
-                    Call (919) 660-6400 and request <strong>Reservations</strong>.
-                </p>
-                <p>
-                    <strong>Group Reference:</strong><br>
-                    Please reference <strong>Optical Terahertz Science & Technology (Group ID #1131975)</strong>.
-                </p>
-            </div>
-        </div>
-        
-        <p style="font-size: 0.85em; color: #666; font-style: italic; margin-top: 10px;">
-            Note: The online booking link may not be supported on all mobile devices; a desktop browser is recommended.
-        </p>
+    <h2>Venue & Lodging</h2>
+    <p>OTST 2026 will be held at the <strong>JB Duke Hotel</strong> on Duke University's West Campus.</p>
+    
+    <div class="info-card">
+        <p><strong>JB Duke Hotel</strong><br>230 Science Drive, Durham, NC 27708</p>
+        <p><strong>Group Rate:</strong> Available until March 20th, 2026. 
+        <a href="https://reservations.travelclick.com/99471?groupID=4719796" target="_blank">Book Online</a></p>
     </div>
 
-    <h3>Getting to Durham, NC</h3>
-    <h4>By Air</h4>
-    <p>
-        The closest major airport is <strong>Raleigh-Durham International Airport (RDU)</strong>.
-        The airport is located approximately 15 miles (20-25 minutes by car) from the conference venue.
-    </p>
-    <p>
-        Transportation options from RDU to the JB Duke Hotel:
-    </p>
+    <hr>
+
+    <h2>Local Excursions</h2>
+    <p>Join your colleagues for these planned social and cultural outings in the Durham area:</p>
+    
+    <div class="excursion-container">
+        <div class="excursion-item">
+            <h4>Sarah P. Duke Gardens</h4>
+            <p>A guided walking tour of one of the premier public gardens in the United States, located right on Duke's campus.</p>
+        </div>
+        <div class="excursion-item">
+            <h4>Durham Bulls Athletic Park</h4>
+            <p>Experience a classic American afternoon at the ballpark, home of the world-famous Durham Bulls.</p>
+        </div>
+        <div class="excursion-item">
+            <h4>American Tobacco Campus</h4>
+            <p>A tour of Durham's historic revitalized district, featuring unique architecture, shops, and dining.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Travel to Durham</h3>
+    <p>Raleigh-Durham International (RDU) is the primary airport, located ~15 miles from the venue.</p>
     <ul>
-        <li><strong>Taxi:</strong> Available at the airport terminals. Estimated cost: $42 - $52 USD. (<a href="http://www.taxitaxiofraleigh.com/rates/" target="_blank">Taxi Taxi of Raleigh</a>)</li>
-        <li><strong>Ride-sharing (Uber/Lyft):</strong> Available through their respective apps. Estimated cost: $24 - $35 USD. (<a href="https://www.uber.com/global/en/price-estimate/" target="_blank">Uber Price Estimator</a>)</li>
-        <li><strong>Rental Cars:</strong> Several rental car agencies operate at RDU.</li>
+        <li><strong>Uber/Lyft:</strong> ~$24 - $35</li>
+        <li><strong>Taxi:</strong> ~$42 - $52</li>
+        <li><strong>Parking:</strong> Included for hotel guests; $15/day for off-site attendees.</li>
     </ul>
 
-    <h3>Parking</h3>
-    <p>
-        For guests staying at the JB Duke Hotel, parking is included with your room.
-        For conference attendees not staying at the hotel, parking is available at a rate of $15 USD per day.
-    </p>
-
     <footer>
-        &copy; Conference Organizers
-        &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
+        &copy; Conference Organizers | Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
     </footer>
-
 </body>
 </html>
