@@ -14,7 +14,7 @@
         table.navigation td { 
             padding: 10px 15px; 
             text-align: center; 
-            white-space: nowrap; /* Keep menu items on one line */
+            white-space: nowrap; 
         }
         
         /* Venue Card Styling */
@@ -26,7 +26,7 @@
             border: 1px solid #e1e8ed; 
         }
 
-        /* FINAL BLOCK-BASED EXCURSION STYLING */
+        /* EXCURSION STYLING */
         .excursion-container {
             margin-top: 20px;
             width: 100%;
@@ -37,10 +37,8 @@
             border: 1px solid #ddd; 
             padding: 20px; 
             border-radius: 8px; 
-            margin-bottom: 15px; /* Adds space between stacked boxes */
+            margin-bottom: 15px; 
             box-sizing: border-box !important; 
-            
-            /* FORCING TEXT WRAP */
             display: block !important;
             white-space: normal !important; 
             word-wrap: break-word !important; 
@@ -59,10 +57,15 @@
 
         .excursion-item p {
             line-height: 1.6;
-            margin: 0;
+            margin: 0 0 10px 0;
             white-space: normal !important; 
             display: block !important;
-            word-break: normal !important;
+        }
+
+        .excursion-link {
+            color: #0056b3;
+            text-decoration: underline;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -99,20 +102,31 @@
     <hr>
 
     <h2>Local Excursions</h2>
-    <p>Join your colleagues for these planned social and cultural outings in the Durham area:</p>
+    <p>Join your colleagues for these planned social and cultural outings at Duke University:</p>
     
     <div class="excursion-container">
         <div class="excursion-item">
+            <h4>Duke Lemur Center</h4>
+            <p>The world's largest and most diverse collection of lemurs—Earth’s most endangered group of mammals—outside of Madagascar.</p>
+            <a href="https://lemur.duke.edu/" target="_blank" class="excursion-link">Visit Website</a>
+        </div>
+
+        <div class="excursion-item">
             <h4>Sarah P. Duke Gardens</h4>
             <p>A guided walking tour of one of the premier public gardens in the United States, located right on Duke's campus.</p>
+            <a href="https://gardens.duke.edu/" target="_blank" class="excursion-link">Visit Website</a>
         </div>
+
         <div class="excursion-item">
-            <h4>Durham Bulls Athletic Park</h4>
-            <p>Experience a classic American afternoon at the ballpark, home of the world-famous Durham Bulls.</p>
+            <h4>Duke University Chapel Tower Climb</h4>
+            <p>Climb the 239 steps of the iconic Chapel tower for a breathtaking panoramic view of the Duke campus and Durham.</p>
+            <a href="https://chapel.duke.edu/" target="_blank" class="excursion-link">Visit Website</a>
         </div>
+
         <div class="excursion-item">
-            <h4>American Tobacco Campus</h4>
-            <p>A tour of Durham's historic revitalized district, featuring unique architecture, shops, and dining.</p>
+            <h4>Duke Basketball Museum & Athletics Hall of Fame</h4>
+            <p>Explore the history of one of the most successful college basketball programs in the nation.</p>
+            <a href="https://goduke.com/feature/Tours" target="_blank" class="excursion-link">Visit Website</a>
         </div>
     </div>
 
