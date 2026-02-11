@@ -23,6 +23,35 @@
             text-align: center;
             white-space: nowrap; 
         }
+
+        /* Sponsor Tier Styling */
+        .tier-heading {
+            text-align: center;
+            margin: 30px 0 15px 0;
+            font-family: inherit;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .sponsor-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .sponsor-container img {
+            display: block;
+        }
+        
+        /* Tiered Scaling */
+        /* Platinum remains the largest focal point */
+        .platinum img { max-height: 150px; width: auto; }
+        
+        /* Unified size for lower tiers to ensure legibility */
+        .gold img, 
+        .silver img, 
+        .bronze img { max-height: 110px; width: auto; }
     </style>
 </head>
 
@@ -74,7 +103,7 @@
     <ul>
         <li>Abstract Submission: CLOSED (Deadline: February 1st)</li>
         <li>Early Bird Registration Deadline: February 28th, 2026</li>
-        <li>Abstract Acceptance Announcement: February 15th,2026</li>
+        <li>Abstract Acceptance Announcement: February 15th, 2026</li>
         <li>Hotel Group Rate Cutoff: March 20th, 2026</li>
         <li>Normal Registration Deadline: March 27th, 2026</li>
     </ul>
@@ -90,20 +119,33 @@
         The Technical Committee consists of Hou-Tong Chen from Los Alamos National Laboratory, and Michael Johnston from the University of Oxford.
     </p>
     
-    <table class="sponsors">
-        <tr>
-            <td class="sponsor">
-                <a href="https://ece.duke.edu/" target="_blank">
-                    <img src="assets/ECE_Duke.jpg" alt="Duke ECE" style="height: 100px; width: auto;">
-                </a>
-            </td>
-            <td class="sponsor">
-                <a href="https://dmi.duke.edu/" target="_blank">
-                    <img src="assets/dmi.jpg" alt="DMI Duke" style="height: 100px; width: auto;">
-                </a>
-            </td>
-            </tr>
-    </table>
+    <h2 class="tier-heading">Platinum Sponsors</h2>
+    <div class="sponsor-container platinum">
+        <a href="https://www.toptica.com/" target="_blank">
+            <img src="assets/TOPTICA-logo-black-rgb.png" alt="TOPTICA Photonics">
+        </a>
+    </div>
+
+    <h2 class="tier-heading">Gold Sponsors</h2>
+    <div class="sponsor-container gold">
+        <a href="https://ece.duke.edu/" target="_blank">
+            <img src="assets/ECE_Duke.jpg" alt="Duke ECE">
+        </a>
+    </div>
+
+    <h2 class="tier-heading">Silver Sponsors</h2>
+    <div class="sponsor-container silver">
+        <a href="https://dmi.duke.edu/" target="_blank">
+            <img src="assets/dmi.jpg" alt="DMI Duke">
+        </a>
+    </div>
+
+    <h2 class="tier-heading">Bronze Sponsors</h2>
+    <div class="sponsor-container bronze">
+        <a href="https://www.swissterahertz.com/" target="_blank">
+            <img src="assets/logo_swiss-terahertz-03.jpg" alt="Swiss Terahertz">
+        </a>
+    </div>
 
     <footer>
         &copy; Conference Organizers
