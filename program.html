@@ -24,6 +24,41 @@
             white-space: nowrap; /* Prevents text wrapping in the menu */
         }
 
+        /* NEW At a Glance Table Styling */
+        .at-a-glance {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85em;
+            table-layout: fixed;
+            margin-bottom: 40px;
+        }
+        .at-a-glance th, .at-a-glance td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 4px 2px;
+            height: 22px;
+            vertical-align: middle;
+        }
+        .at-a-glance th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        .time-col { 
+            width: 75px; 
+            font-weight: bold; 
+            background: #eee !important; 
+        }
+
+        /* Color Coding based on image program */
+        .registration-cell { background-color: #a9a9a9; color: black; }
+        .keynote-cell { background-color: #00ffff; }
+        .invited-cell { background-color: #ffff00; }
+        .contributed-cell { background-color: #ff9900; }
+        .break-cell { background-color: #00ff00; }
+        .special-cell { background-color: #ff00ff; color: white; font-weight: bold; }
+        .tutorial-cell { background-color: #adb9ca; }
+        .poster-cell { background-color: #adc2ff; }
+
         .keynote-table {
             width: 100%;
             border-collapse: collapse;
@@ -122,6 +157,21 @@
             margin-top: 10px;
             border-radius: 4px;
         }
+        
+        /* Schedule Table Style (Original) */
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .schedule th, .schedule td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .schedule th {
+            background-color: #f4f4f4;
+        }
     </style>
 </head>
 
@@ -152,6 +202,218 @@
         Welcome to the program page for OTST 2026. Here you will find the schedule of talks, poster sessions, and other events.
         The program is subject to change. Please check back regularly for updates.
     </p>
+
+    <h3>At a Glance Program</h3>
+    <table class="at-a-glance">
+        <thead>
+            <tr>
+                <th class="time-col">Time</th>
+                <th>Sunday<br>Apr 12th</th>
+                <th>Monday<br>Apr 13th</th>
+                <th>Tuesday<br>Apr 14th</th>
+                <th>Wednesday<br>Apr 15th</th>
+                <th>Thursday<br>Apr 16th</th>
+                <th>Friday<br>Apr 17th</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">7:30 - 8:00</td>
+                <td></td>
+                <td class="registration-cell" rowspan="2">Registration</td>
+                <td class="registration-cell" rowspan="2">Registration</td>
+                <td class="registration-cell" rowspan="2">Registration</td>
+                <td class="registration-cell" rowspan="2">Registration</td>
+                <td class="registration-cell" rowspan="2">Registration</td>
+            </tr>
+            <tr>
+                <td class="time-col">8:00 - 8:15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="time-col">8:15 - 8:30</td>
+                <td></td>
+                <td class="keynote-cell">Opening Remarks</td>
+                <td class="keynote-cell" rowspan="2">Keynote (Liu)</td>
+                <td class="keynote-cell" rowspan="2">Keynote (Burghoff)</td>
+                <td class="keynote-cell" rowspan="2">Keynote (Kocabas)</td>
+                <td class="keynote-cell" rowspan="2">Keynote (Tanaka)</td>
+            </tr>
+            <tr>
+                <td class="time-col">8:30 - 8:45</td>
+                <td></td>
+                <td class="keynote-cell" rowspan="2">Keynote (Ozcan)</td>
+            </tr>
+            <tr>
+                <td class="time-col">8:45 - 9:00</td>
+                <td></td>
+                <td class="invited-cell" rowspan="2">Invited (Cocker)</td>
+                <td class="invited-cell" rowspan="2">Invited (Williams)</td>
+                <td class="invited-cell" rowspan="2">Invited (Klarskov Hansen)</td>
+                <td class="invited-cell" rowspan="2">Invited (Jarrahi)</td>
+            </tr>
+            <tr>
+                <td class="time-col">9:00 - 9:15</td>
+                <td></td>
+                <td class="invited-cell" rowspan="2">Invited (Rahm)</td>
+            </tr>
+            <tr>
+                <td class="time-col">9:15 - 9:30</td>
+                <td></td>
+                <td class="invited-cell" rowspan="2">Invited (Siday)</td>
+                <td class="invited-cell" rowspan="2">Invited (Everitt)</td>
+                <td class="invited-cell" rowspan="2">Invited (Bandyopadhyay)</td>
+                <td class="invited-cell" rowspan="2">Invited (Venkatesh)</td>
+            </tr>
+            <tr>
+                <td class="time-col">9:30 - 9:45</td>
+                <td></td>
+                <td class="contributed-cell">Contributed</td>
+            </tr>
+            <tr>
+                <td class="time-col">9:45 - 10:05</td>
+                <td></td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+            </tr>
+            <tr>
+                <td class="time-col">10:05 - 10:45</td>
+                <td></td>
+                <td class="break-cell">Coffee Break (40 min)</td>
+                <td class="break-cell">Coffee Break</td>
+                <td class="break-cell">Coffee Break</td>
+                <td class="break-cell">Coffee Break</td>
+                <td class="break-cell">Coffee Break</td>
+            </tr>
+            <tr>
+                <td class="time-col">10:45 - 11:35</td>
+                <td></td>
+                <td class="keynote-cell">Keynote (Averitt)</td>
+                <td class="keynote-cell">Keynote (Taylor)</td>
+                <td class="keynote-cell">Keynote (Mittleman)</td>
+                <td class="keynote-cell">Keynote (Tonouchi)</td>
+                <td class="keynote-cell">Keynote</td>
+            </tr>
+            <tr>
+                <td class="time-col">11:35 - 11:55</td>
+                <td></td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed (Chevalier)</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+            </tr>
+            <tr>
+                <td class="time-col">11:55 - 12:00</td>
+                <td></td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+            </tr>
+            <tr>
+                <td class="time-col">12:00 - 13:30</td>
+                <td class="tutorial-cell" rowspan="4">Tutorial and Registration</td>
+                <td class="break-cell" rowspan="2">Lunch</td>
+                <td class="break-cell" rowspan="2">Lunch</td>
+                <td class="break-cell" rowspan="2">Lunch</td>
+                <td class="break-cell" rowspan="2">Lunch</td>
+                <td class="break-cell" rowspan="2">Lunch</td>
+            </tr>
+            <tr>
+                <td class="time-col">13:30 - 14:15</td>
+            </tr>
+            <tr>
+                <td class="time-col">14:15 - 14:50</td>
+                <td class="keynote-cell">Keynote (Sengupta)</td>
+                <td class="keynote-cell">Keynote (Hiuk-Son)</td>
+                <td class="keynote-cell">Keynote (Saraceno)</td>
+                <td class="keynote-cell">Keynote</td>
+                <td class="special-cell" rowspan="11">Excursion</td>
+            </tr>
+            <tr>
+                <td class="time-col">14:50 - 15:10</td>
+                <td class="invited-cell">Invited (Sensale-Rodriguez)</td>
+                <td class="invited-cell">Invited (Lloyd-Hughes)</td>
+                <td class="invited-cell">Invited (Murate)</td>
+                <td class="invited-cell">Invited (Hernandez)</td>
+            </tr>
+            <tr>
+                <td class="time-col">15:10 - 15:30</td>
+                <td></td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+            </tr>
+            <tr>
+                <td class="time-col">15:30 - 16:15</td>
+                <td></td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+            </tr>
+            <tr>
+                <td class="time-col">16:15 - 16:50</td>
+                <td></td>
+                <td class="break-cell">Coffee Break (50 min)</td>
+                <td class="break-cell">Coffee Break</td>
+                <td class="break-cell">Coffee Break</td>
+                <td class="break-cell">Coffee Break</td>
+            </tr>
+            <tr>
+                <td class="time-col">16:50 - 17:10</td>
+                <td></td>
+                <td class="invited-cell">Invited (Ruggiero)</td>
+                <td class="invited-cell">Invited (Citrin)</td>
+                <td class="invited-cell">Invited</td>
+                <td class="invited-cell">Invited (Atakaramians)</td>
+            </tr>
+            <tr>
+                <td class="time-col">17:10 - 17:30</td>
+                <td></td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+            </tr>
+            <tr>
+                <td class="time-col">17:30 - 17:45</td>
+                <td></td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+            </tr>
+            <tr>
+                <td class="time-col">17:45 - 18:30</td>
+                <td></td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+                <td class="contributed-cell">Contributed</td>
+            </tr>
+            <tr>
+                <td class="time-col">18:30 - 18:45</td>
+                <td></td>
+                <td></td>
+                <td class="poster-cell" rowspan="2">Poster Session</td>
+                <td class="special-cell" rowspan="2">Conference Banquet</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="time-col">18:45 - 20:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 
     <h3>Tutorial Talks</h3>
     <table class="tutorial-grid">
@@ -505,7 +767,6 @@
                 </div>
                  NC State University, USA (Title: CMOS platforms for Sub-THz wavefront generation and manipulation)
             </td>
-
         </tr>
         <tr>
             <td>
@@ -560,31 +821,31 @@
             </tr>
             <tr>
                 <td>Monday, April 13, 2026</td>
-                <td>9:00 AM - 5:15 PM</td>
+                <td>8:00 AM - 5:30 PM</td>
                 <td>Invited Talks</td>
                 <td>JB Duke Hotel</td>
             </tr>
              <tr>
                 <td>Tuesday, April 14, 2026</td>
-                <td>9:00 AM - 5:15 PM</td>
+                <td>8:00 AM - 5:30 PM</td>
                 <td>Invited Talks</td>
                 <td>JB Duke Hotel</td>
             </tr>
             <tr>
                 <td>Wednesday, April 15, 2026</td>
-                <td>9:00 AM - 5:15 PM</td>
+                <td>8:00 AM - 5:30 PM</td>
                 <td>Invited Talks</td>
                 <td>JB Duke Hotel</td>
             </tr>
              <tr>
                 <td>Thursday, April 16, 2026</td>
-                <td>9:00 AM - 5:15 PM</td>
+                <td>8:00 AM - 5:30 PM</td>
                 <td>Invited Talks</td>
                 <td>JB Duke Hotel</td>
             </tr>
             <tr>
                 <td>Friday, April 17, 2026</td>
-                <td>9:00 AM - 5:15 PM</td>
+                <td>8:00 AM - 5:30 PM</td>
                 <td>Invited Talks</td>
                 <td>JB Duke Hotel</td>
             </tr>
