@@ -24,9 +24,18 @@
             white-space: nowrap; /* Prevents text wrapping in the menu */
         }
 
+        /* Responsive Container for Mobile Scroll */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 20px;
+        }
+
         /* NEW At a Glance Table Styling */
         .at-a-glance {
             width: 100%;
+            min-width: 800px; /* Ensures legibility on mobile viewports */
             border-collapse: collapse;
             font-size: 0.85em;
             table-layout: fixed;
@@ -204,6 +213,7 @@
     </p>
 
     <h3>At a Glance Program</h3>
+    <div class="table-responsive">
     <table class="at-a-glance">
         <thead>
             <tr>
@@ -414,6 +424,7 @@
             </tr>
         </tbody>
     </table>
+    </div>
 
     <h3>Tutorial Talks</h3>
     <table class="tutorial-grid">
@@ -788,6 +799,20 @@
             </td>
         </tr>
         </table>
+
+<h3 id="student-awards">Student Awards</h3>
+<div class="info-card" style="border-left: 5px solid #003366; background-color: #f0f4f8; padding: 15px; border-radius: 4px;">
+    <p>
+        Supported by a generous contribution from <strong>Swiss Terahertz</strong>, OTST 2026 is pleased to announce two awards for excellence in student presentations:
+    </p>
+    <ul>
+        <li><strong>Best Student Talk:</strong> $1,000 USD</li>
+        <li><strong>Runner-up Best Student Talk:</strong> $500 USD</li>
+    </ul>
+    <p>
+        Eligible presentations will be evaluated by the Technical Committee based on scientific rigor, innovation in terahertz methodology, and clarity of delivery.
+    </p>
+</div>
 
     <h3>Conference Schedule Overview</h3>
     <table class="schedule">
