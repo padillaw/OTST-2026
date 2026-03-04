@@ -3,14 +3,14 @@
 
 <head>
     <base href=".">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
-    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css" />
     <meta name="description" content="Conference Template - Program">
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
     <meta name="KeyWords" content="Conference, Program, Schedule">
     <title>OTST 2026 - Program</title>
-    
+
     <style>
         /* CSS Spacing Fix for Navigation Bar */
         table.navigation {
@@ -18,10 +18,11 @@
             border-collapse: collapse;
             margin-bottom: 20px;
         }
+
         table.navigation td {
-            padding: 10px 15px; /* Adds space between menu items */
+            padding: 10px 15px;
             text-align: center;
-            white-space: nowrap; /* Prevents text wrapping in the menu */
+            white-space: nowrap;
         }
 
         /* Responsive Container for Mobile Scroll */
@@ -32,75 +33,105 @@
             margin-bottom: 20px;
         }
 
-        /* NEW At a Glance Table Styling */
+        /* At a Glance Table Styling */
         .at-a-glance {
             width: 100%;
-            min-width: 800px; /* Ensures legibility on mobile viewports */
+            min-width: 900px;
             border-collapse: collapse;
             font-size: 0.85em;
             table-layout: fixed;
             margin-bottom: 40px;
         }
-        .at-a-glance th, .at-a-glance td {
+
+        .at-a-glance th,
+        .at-a-glance td {
             border: 1px solid #ddd;
             text-align: center;
             padding: 4px 2px;
             height: 22px;
             vertical-align: middle;
         }
+
         .at-a-glance th {
             background-color: #f8f8f8;
             font-weight: bold;
         }
-        .time-col { 
-            width: 75px; 
-            font-weight: bold; 
-            background: #eee !important; 
+
+        .time-col {
+            width: 110px;
+            font-weight: bold;
+            background: #eee !important;
         }
 
-        /* Color Coding based on image program */
-        .registration-cell { background-color: #a9a9a9; color: black; }
-        .keynote-cell { background-color: #00ffff; }
-        .invited-cell { background-color: #ffff00; }
-        .contributed-cell { background-color: #ff9900; }
-        .break-cell { background-color: #00ff00; }
-        .special-cell { background-color: #ff00ff; color: white; font-weight: bold; }
-        .tutorial-cell { background-color: #adb9ca; }
-        .poster-cell { background-color: #adc2ff; }
+        /* Color Coding based on visual program */
+        .registration-cell {
+            background-color: #a9a9a9;
+            color: black;
+        }
+
+        .keynote-cell {
+            background-color: #00ffff;
+        }
+
+        .invited-cell {
+            background-color: #ffff00;
+        }
+
+        .contributed-cell {
+            background-color: #ff9900;
+        }
+
+        .break-cell {
+            background-color: #00ff00;
+        }
+
+        .special-cell {
+            background-color: #ff00ff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .tutorial-cell {
+            background-color: #adb9ca;
+        }
+
+        .poster-cell {
+            background-color: #adc2ff;
+        }
 
         .keynote-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
         }
+
         .keynote-table td {
-            padding: 15px 0; 
+            padding: 15px 0;
             border-bottom: 1px solid #eee;
             vertical-align: top;
         }
+
         .image-container {
             width: 90px;
-            height: 90px; 
-            overflow: hidden; 
+            height: 90px;
+            overflow: hidden;
             display: inline-block;
             margin-right: 20px;
         }
+
         .keynote-table img {
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: cover;
             display: block;
-            border-radius: 0; 
+            border-radius: 0;
             box-shadow: none;
         }
+
         .keynote-table td:first-child {
-            width: 110px; 
+            width: 110px;
         }
-        .keynote-name a {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
+
         .keynote-name {
             font-weight: bold;
             display: block;
@@ -111,9 +142,10 @@
         .tutorial-grid {
             width: 100%;
             border-collapse: separate;
-            border-spacing: 20px; 
+            border-spacing: 20px;
             margin-bottom: 30px;
         }
+
         .tutorial-item {
             width: 50%;
             text-align: center;
@@ -122,6 +154,7 @@
             background-color: #f9f9f9;
             border-radius: 8px;
         }
+
         .tutorial-image-container {
             width: 120px;
             height: 120px;
@@ -129,15 +162,18 @@
             overflow: hidden;
             display: block;
         }
+
         .tutorial-image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
+
         .tutorial-info {
             font-size: 0.95em;
         }
+
         .tutorial-name a {
             font-weight: bold;
             display: block;
@@ -145,9 +181,11 @@
             color: #003366;
             text-decoration: none;
         }
+
         .tutorial-name a:hover {
             text-decoration: underline;
         }
+
         .abstract-toggle {
             display: inline-block;
             margin-top: 5px;
@@ -156,6 +194,7 @@
             text-decoration: underline;
             cursor: pointer;
         }
+
         .abstract-content {
             display: none;
             text-align: left;
@@ -166,18 +205,20 @@
             margin-top: 10px;
             border-radius: 4px;
         }
-        
-        /* Schedule Table Style (Original) */
+
         .schedule {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-        .schedule th, .schedule td {
+
+        .schedule th,
+        .schedule td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
+
         .schedule th {
             background-color: #f4f4f4;
         }
@@ -197,233 +238,279 @@
     </div>
 
     <table class="navigation">
-    <tr>
-        <td class="navigation"><a title="Home" href="index.html">Home</a></td>
-        <td class="navigation"><a title="Registration" href="registration.html">Registration</a></td>
-        <td class="navigation"><a title="Submissions" href="submissions.html">Submissions</a></td>
-        <td class="navigation"><a class="current" title="Program" href="program.html">Program</a></td>
-        <td class="navigation"><a title="Venue & Excursions" href="directions.html">Venue & Excursions</a></td>
-    </tr>
-</table>
+        <tr>
+            <td class="navigation"><a title="Home" href="index.html">Home</a></td>
+            <td class="navigation"><a title="Registration" href="registration.html">Registration</a></td>
+            <td class="navigation"><a title="Submissions" href="submissions.html">Submissions</a></td>
+            <td class="navigation"><a class="current" title="Program" href="program.html">Program</a></td>
+            <td class="navigation"><a title="Venue & Excursions" href="directions.html">Venue & Excursions</a></td>
+        </tr>
+    </table>
 
     <h2>Conference Program</h2>
     <p>
-        Welcome to the program page for OTST 2026. Here you will find the schedule of talks, poster sessions, and other events.
+        Welcome to the program page for OTST 2026. Here you will find the schedule of talks, poster sessions, and other
+        events.
         The program is subject to change. Please check back regularly for updates.
+    </p>
+
+    <p>
+        <strong>Download:</strong> <a href="assets/Visual schedule of OTST 2026 at a glance.pdf" target="_blank">PDF
+            Version of the At-a-Glance Program</a>
     </p>
 
     <h3>At a Glance Program</h3>
     <div class="table-responsive">
-    <table class="at-a-glance">
-        <thead>
-            <tr>
-                <th class="time-col">Time</th>
-                <th>Sunday<br>Apr 12th</th>
-                <th>Monday<br>Apr 13th</th>
-                <th>Tuesday<br>Apr 14th</th>
-                <th>Wednesday<br>Apr 15th</th>
-                <th>Thursday<br>Apr 16th</th>
-                <th>Friday<br>Apr 17th</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="time-col">7:30 - 8:00</td>
-                <td></td>
-                <td class="registration-cell" rowspan="2">Registration</td>
-                <td class="registration-cell" rowspan="2">Registration</td>
-                <td class="registration-cell" rowspan="2">Registration</td>
-                <td class="registration-cell" rowspan="2">Registration</td>
-                <td class="registration-cell" rowspan="2">Registration</td>
-            </tr>
-            <tr>
-                <td class="time-col">8:00 - 8:15</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="time-col">8:15 - 8:30</td>
-                <td></td>
-                <td class="keynote-cell">Opening Remarks</td>
-                <td class="keynote-cell" rowspan="2">Keynote (Liu)</td>
-                <td class="keynote-cell" rowspan="2">Keynote (Burghoff)</td>
-                <td class="keynote-cell" rowspan="2">Keynote (Kocabas)</td>
-                <td class="keynote-cell" rowspan="2">Keynote (Tanaka)</td>
-            </tr>
-            <tr>
-                <td class="time-col">8:30 - 8:45</td>
-                <td></td>
-                <td class="keynote-cell" rowspan="2">Keynote (Ozcan)</td>
-            </tr>
-            <tr>
-                <td class="time-col">8:45 - 9:00</td>
-                <td></td>
-                <td class="invited-cell" rowspan="2">Invited (Cocker)</td>
-                <td class="invited-cell" rowspan="2">Invited (Williams)</td>
-                <td class="invited-cell" rowspan="2">Invited (Klarskov Hansen)</td>
-                <td class="invited-cell" rowspan="2">Invited (Jarrahi)</td>
-            </tr>
-            <tr>
-                <td class="time-col">9:00 - 9:15</td>
-                <td></td>
-                <td class="invited-cell" rowspan="2">Invited (Rahm)</td>
-            </tr>
-            <tr>
-                <td class="time-col">9:15 - 9:30</td>
-                <td></td>
-                <td class="invited-cell" rowspan="2">Invited (Siday)</td>
-                <td class="invited-cell" rowspan="2">Invited (Everitt)</td>
-                <td class="invited-cell" rowspan="2">Invited (Bandyopadhyay)</td>
-                <td class="invited-cell" rowspan="2">Invited (Venkatesh)</td>
-            </tr>
-            <tr>
-                <td class="time-col">9:30 - 9:45</td>
-                <td></td>
-                <td class="contributed-cell">Contributed</td>
-            </tr>
-            <tr>
-                <td class="time-col">9:45 - 10:05</td>
-                <td></td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-            </tr>
-            <tr>
-                <td class="time-col">10:05 - 10:45</td>
-                <td></td>
-                <td class="break-cell">Coffee Break (40 min)</td>
-                <td class="break-cell">Coffee Break</td>
-                <td class="break-cell">Coffee Break</td>
-                <td class="break-cell">Coffee Break</td>
-                <td class="break-cell">Coffee Break</td>
-            </tr>
-            <tr>
-                <td class="time-col">10:45 - 11:35</td>
-                <td></td>
-                <td class="keynote-cell">Keynote (Averitt)</td>
-                <td class="keynote-cell">Keynote (Taylor)</td>
-                <td class="keynote-cell">Keynote (Mittleman)</td>
-                <td class="keynote-cell">Keynote (Tonouchi)</td>
-                <td class="keynote-cell">Keynote</td>
-            </tr>
-            <tr>
-                <td class="time-col">11:35 - 11:55</td>
-                <td></td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed (Chevalier)</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-            </tr>
-            <tr>
-                <td class="time-col">11:55 - 12:00</td>
-                <td></td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-            </tr>
-            <tr>
-                <td class="time-col">12:00 - 13:30</td>
-                <td class="tutorial-cell" rowspan="4">Tutorial and Registration</td>
-                <td class="break-cell" rowspan="2">Lunch</td>
-                <td class="break-cell" rowspan="2">Lunch</td>
-                <td class="break-cell" rowspan="2">Lunch</td>
-                <td class="break-cell" rowspan="2">Lunch</td>
-                <td class="break-cell" rowspan="2">Lunch</td>
-            </tr>
-            <tr>
-                <td class="time-col">13:30 - 14:15</td>
-            </tr>
-            <tr>
-                <td class="time-col">14:15 - 14:50</td>
-                <td class="keynote-cell">Keynote (Sengupta)</td>
-                <td class="keynote-cell">Keynote (Hiuk-Son)</td>
-                <td class="keynote-cell">Keynote (Saraceno)</td>
-                <td class="keynote-cell">Keynote</td>
-                <td class="special-cell" rowspan="11">Excursion</td>
-            </tr>
-            <tr>
-                <td class="time-col">14:50 - 15:10</td>
-                <td class="invited-cell">Invited (Sensale-Rodriguez)</td>
-                <td class="invited-cell">Invited (Lloyd-Hughes)</td>
-                <td class="invited-cell">Invited (Murate)</td>
-                <td class="invited-cell">Invited (Hernandez)</td>
-            </tr>
-            <tr>
-                <td class="time-col">15:10 - 15:30</td>
-                <td></td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-            </tr>
-            <tr>
-                <td class="time-col">15:30 - 16:15</td>
-                <td></td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-            </tr>
-            <tr>
-                <td class="time-col">16:15 - 16:50</td>
-                <td></td>
-                <td class="break-cell">Coffee Break (50 min)</td>
-                <td class="break-cell">Coffee Break</td>
-                <td class="break-cell">Coffee Break</td>
-                <td class="break-cell">Coffee Break</td>
-            </tr>
-            <tr>
-                <td class="time-col">16:50 - 17:10</td>
-                <td></td>
-                <td class="invited-cell">Invited (Ruggiero)</td>
-                <td class="invited-cell">Invited (Citrin)</td>
-                <td class="invited-cell">Invited</td>
-                <td class="invited-cell">Invited (Atakaramians)</td>
-            </tr>
-            <tr>
-                <td class="time-col">17:10 - 17:30</td>
-                <td></td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-            </tr>
-            <tr>
-                <td class="time-col">17:30 - 17:45</td>
-                <td></td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-            </tr>
-            <tr>
-                <td class="time-col">17:45 - 18:30</td>
-                <td></td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-                <td class="contributed-cell">Contributed</td>
-            </tr>
-            <tr>
-                <td class="time-col">18:30 - 18:45</td>
-                <td></td>
-                <td></td>
-                <td class="poster-cell" rowspan="2">Poster Session</td>
-                <td class="special-cell" rowspan="2">Conference Banquet</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="time-col">18:45 - 20:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+        <table class="at-a-glance">
+            <thead>
+                <tr>
+                    <th class="time-col">Time</th>
+                    <th>Sunday<br>Apr 12th</th>
+                    <th>Monday<br>Apr 13th</th>
+                    <th>Tuesday<br>Apr 14th</th>
+                    <th>Wednesday<br>Apr 15th</th>
+                    <th>Thursday<br>Apr 16th</th>
+                    <th>Friday<br>Apr 17th</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">7:30 - 7:45</td>
+                    <td rowspan="3"></td>
+                    <td class="registration-cell" rowspan="2">Registration</td>
+                    <td class="registration-cell" rowspan="2">Registration</td>
+                    <td class="registration-cell" rowspan="2">Registration</td>
+                    <td class="registration-cell" rowspan="2">Registration</td>
+                    <td class="registration-cell" rowspan="7">Registration</td>
+                </tr>
+                <tr>
+                    <td class="time-col">7:45 - 8:00</td>
+                </tr>
+                <tr>
+                    <td class="time-col">8:00 - 8:15</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Liu)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Burghoff)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Kocabas)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Tanaka)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">8:15 - 8:30</td>
+                    <td class="keynote-cell">Opening Remarks</td>
+                </tr>
+                <tr>
+                    <td class="time-col">8:30 - 8:45</td>
+                    <td class="keynote-cell" rowspan="4">Keynote (Ozcan)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">8:45 - 9:00</td>
+                    <td class="invited-cell" rowspan="2">Invited (Cocker)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Williams)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Klarskov Hansen)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Jarrahi)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">9:00 - 9:15</td>
+                </tr>
+                <tr>
+                    <td class="time-col">9:15 - 9:30</td>
+                    <td class="invited-cell" rowspan="2">Invited (Rahm)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Siday)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Everitt)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Bandyopadhyay)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Venkatesh)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">9:30 - 9:45</td>
+                    <td class="registration-cell" rowspan="6">Registrations</td>
+                </tr>
+                <tr>
+                    <td class="time-col">9:45 - 10:05</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:05 - 10:15</td>
+                    <td class="break-cell" rowspan="3">Coffee Break (40 min)</td>
+                    <td class="break-cell" rowspan="3">Coffee Break</td>
+                    <td class="break-cell" rowspan="3">Coffee Break</td>
+                    <td class="break-cell" rowspan="3">Coffee Break</td>
+                    <td class="break-cell" rowspan="3">Coffee Break</td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:15 - 10:30</td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:30 - 10:45</td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:45 - 11:00</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Averitt)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Taylor)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Mittleman)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Tonouchi)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:00 - 11:15</td>
+                    <td class="tutorial-cell" rowspan="4">Zhang</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:15 - 11:30</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:30 - 11:50</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed (Chevalier)</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:50 - 12:10</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                </tr>
+                <tr>
+                    <td class="time-col"></td>
+                    <td class="tutorial-cell" rowspan="4">Markelz</td>
+                    <td class="break-cell" rowspan="6">Lunch</td>
+                    <td class="break-cell" rowspan="6">Lunch</td>
+                    <td class="break-cell" rowspan="6">Lunch</td>
+                    <td class="break-cell" rowspan="6">Lunch</td>
+                    <td class="special-cell">Closing / awards</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:15 - 12:30</td>
+                    <td class="break-cell" rowspan="6">Lunch</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30 - 12:45</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:45 - 13:00</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:00 - 13:15</td>
+                    <td class="break-cell" rowspan="4">Lunch</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:15 - 13:30</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:30 - 13:45</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Sengupta)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Hiuk-Son)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote (Saraceno)</td>
+                    <td class="keynote-cell" rowspan="3">Keynote</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:45 - 14:00</td>
+                    <td class="special-cell" rowspan="20">Excursion</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:00 - 14:15</td>
+                    <td class="tutorial-cell" rowspan="4">Neu</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:15 - 14:30</td>
+                    <td class="invited-cell" rowspan="2">Invited (Sensale-Rodriguez)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Lloyd-Hughes)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Murate)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Hernandez)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:30 - 14:45</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:45 - 15:05</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:05 - 15:20</td>
+                    <td class="tutorial-cell" rowspan="4">Ra'di</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:20 - 15:30</td>
+                    <td class="break-cell" rowspan="3">Coffee Break (40 min)</td>
+                    <td class="break-cell" rowspan="3">Coffee Break</td>
+                    <td class="break-cell" rowspan="3">Coffee Break</td>
+                    <td class="break-cell" rowspan="3">Coffee Break</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:30 - 15:45</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:45 - 16:00</td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:00 - 16:15</td>
+                    <td rowspan="5"></td>
+                    <td class="invited-cell" rowspan="2">Invited (Ruggiero)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Citrin)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Otani)</td>
+                    <td class="invited-cell" rowspan="2">Invited (Atakaramians)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:15 - 16:30</td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:30 - 16:50</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:50 - 17:10</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:10 - 17:30</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                    <td class="contributed-cell">Contributed</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:30 - 17:45</td>
+                    <td rowspan="6"></td>
+                    <td class="poster-cell" rowspan="6">Poster Session</td>
+                    <td class="special-cell" rowspan="6">Conference Banquet</td>
+                    <td rowspan="6"></td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:45 - 18:00</td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:00 - 18:15</td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:15 - 18:30</td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:30 - 18:45</td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:45 - 19:00</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <h3>Tutorial Talks</h3>
@@ -435,14 +522,17 @@
                 </div>
                 <div class="tutorial-info">
                     <span class="tutorial-name">
-                        <a href="https://www.hajim.rochester.edu/optics/people/faculty/zhang_xi-cheng/" target="_blank">X.C. Zhang</a>
+                        <a href="https://www.hajim.rochester.edu/optics/people/faculty/zhang_xi-cheng/"
+                            target="_blank">X.C. Zhang</a>
                     </span>
                     The University of Rochester <br>
                     <div class="abstract-toggle" onclick="toggleAbstract('abs1')">
                         Topic: THz liquid photonics
                     </div>
                     <div id="abs1" class="abstract-content">
-                        This tutorial will cover recent progress in THz liquid photonics—an extension of our previous research on THz air photonics. Investigating THz generation from liquids may complete the final piece of the matter-phase puzzle in THz photonics.
+                        This tutorial will cover recent progress in THz liquid photonics—an extension of our previous
+                        research on THz air photonics. Investigating THz generation from liquids may complete the final
+                        piece of the matter-phase puzzle in THz photonics.
                     </div>
                 </div>
             </td>
@@ -452,7 +542,8 @@
                 </div>
                 <div class="tutorial-info">
                     <span class="tutorial-name">
-                        <a href="https://arts-sciences.buffalo.edu/physics/faculty/andrea-markelz.html" target="_blank">Andrea Markelz</a>
+                        <a href="https://arts-sciences.buffalo.edu/physics/faculty/andrea-markelz.html"
+                            target="_blank">Andrea Markelz</a>
                     </span>
                     The University at Buffalo <br>
                     <div class="abstract-toggle" onclick="toggleAbstract('abs2')">
@@ -495,7 +586,9 @@
                         Topic: Optical Pump THz Probe Spectroscopy
                     </div>
                     <div id="abs4" class="abstract-content">
-                        Optical Pump THz Probe (OPTP) provides a femtosecond view on the life of electrons, holes, and more exotic quasiparticles.  This tutorial introduces the spectroscopic technique and provides insight into the photoelectron/hole life in organic frameworks and other emerging materials. 
+                        Optical Pump THz Probe (OPTP) provides a femtosecond view on the life of electrons, holes, and
+                        more exotic quasiparticles. This tutorial introduces the spectroscopic technique and provides
+                        insight into the photoelectron/hole life in organic frameworks and other emerging materials.
                     </div>
                 </div>
             </td>
@@ -523,7 +616,8 @@
             </td>
             <td>
                 <div class="keynote-name">
-                    <a href="https://www.ile.osaka-u.ac.jp/eng/overview/members/masayoshi_tonouchi/index.html" target="_blank">Masayoshi Tonouchi</a>
+                    <a href="https://www.ile.osaka-u.ac.jp/eng/overview/members/masayoshi_tonouchi/index.html"
+                        target="_blank">Masayoshi Tonouchi</a>
                 </div>
                 Okayama University, Japan (Title: Scanning Point Terahertz Source for Bio-Applications)
             </td>
@@ -536,9 +630,11 @@
             </td>
             <td>
                 <div class="keynote-name">
-                    <a href="https://www.puls.ruhr-uni-bochum.de/puls/aboutus/clarasaraceno.html.en" target="_blank">Clara Saraceno</a>
+                    <a href="https://www.puls.ruhr-uni-bochum.de/puls/aboutus/clarasaraceno.html.en"
+                        target="_blank">Clara Saraceno</a>
                 </div>
-                Ruhr University Bochum, Germany (Title: New directions in high average power, ultrafast laser-driven THz sources)
+                Ruhr University Bochum, Germany (Title: New directions in high average power, ultrafast laser-driven THz
+                sources)
             </td>
         </tr>
         <tr>
@@ -549,9 +645,11 @@
             </td>
             <td>
                 <div class="keynote-name">
-                    <a href="https://research.manchester.ac.uk/en/persons/coskun.kocabas" target="_blank">Coskun Kocabas</a>
+                    <a href="https://research.manchester.ac.uk/en/persons/coskun.kocabas" target="_blank">Coskun
+                        Kocabas</a>
                 </div>
-                The University of Manchester, UK (Title: Very-large-scale reconfigurable intelligent surfaces for dynamic control of terahertz and millimeter waves)
+                The University of Manchester, UK (Title: Very-large-scale reconfigurable intelligent surfaces for
+                dynamic control of terahertz and millimeter waves)
             </td>
         </tr>
         <tr>
@@ -564,7 +662,8 @@
                 <div class="keynote-name">
                     <a href="https://www.ee.ucla.edu/aydogan-ozcan/" target="_blank">Aydogan Ozcan</a>
                 </div>
-                University of California Los Angeles, USA (Title: Programming diffraction for terahertz information processing)
+                University of California Los Angeles, USA (Title: Programming diffraction for terahertz information
+                processing)
             </td>
         </tr>
         <tr>
@@ -588,7 +687,8 @@
             </td>
             <td>
                 <div class="keynote-name">
-                    <a href="https://www.stonybrook.edu/commcms/physics/people/_profiles/lium" target="_blank">Mengkun Liu</a>
+                    <a href="https://www.stonybrook.edu/commcms/physics/people/_profiles/lium" target="_blank">Mengkun
+                        Liu</a>
                 </div>
                 Stony Brook University, USA (Title: Recent Advances in THz near-field Nanoscopy)
             </td>
@@ -616,7 +716,8 @@
                 <div class="keynote-name">
                     <a href="https://www.aalto.fi/en/people/zachary-taylor" target="_blank">Zachary Taylor</a>
                 </div>
-                Aalto University, Finland (Title: Utilizing a perturbed fabry-perot effect to enhance THz spectroscopy of surface tissue)
+                Aalto University, Finland (Title: Utilizing a perturbed fabry-perot effect to enhance THz spectroscopy
+                of surface tissue)
             </td>
         </tr>
         <tr>
@@ -627,9 +728,11 @@
             </td>
             <td>
                 <div class="keynote-name">
-                    <a href="https://www.ece.utexas.edu/people/faculty/david-burghoff" target="_blank">David Burghoff</a>
+                    <a href="https://www.ece.utexas.edu/people/faculty/david-burghoff" target="_blank">David
+                        Burghoff</a>
                 </div>
-                University of Texas at Austin, USA (Title: Nonlinear optics and combs in terahertz quantum cascade lasers)
+                University of Texas at Austin, USA (Title: Nonlinear optics and combs in terahertz quantum cascade
+                lasers)
             </td>
         </tr>
         <tr>
@@ -642,7 +745,8 @@
                 <div class="keynote-name">
                     <a href="https://ece.princeton.edu/people/kaushik-sengupta" target="_blank">Kaushik Sengupta</a>
                 </div>
-                Princeton University, USA (Title: Programmable Electromagnetic Surfaces at mmWave/THz for Future Communication and Sensing)
+                Princeton University, USA (Title: Programmable Electromagnetic Surfaces at mmWave/THz for Future
+                Communication and Sensing)
             </td>
         </tr>
         <tr>
@@ -667,7 +771,8 @@
                 <div class="keynote-name">
                     Benjamin Williams
                 </div>
-                University of California Los Angeles, USA (Title: Towards quantum-cascade VECSELs as THz spectroscopic sources)
+                University of California Los Angeles, USA (Title: Towards quantum-cascade VECSELs as THz spectroscopic
+                sources)
             </td>
         </tr>
         <tr>
@@ -675,7 +780,8 @@
                 <div class="keynote-name">
                     Chiko Otani
                 </div>
-                RIKEN, Center for Advanced Photonics, Japan (Title: Development of Terahertz Sensing Components and Applications)
+                RIKEN, Center for Advanced Photonics, Japan (Title: Development of Terahertz Sensing Components and
+                Applications)
             </td>
         </tr>
         <tr>
@@ -683,7 +789,8 @@
                 <div class="keynote-name">
                     Marco Rahm
                 </div>
-                University of Kaiserslautern, Germany (Title: Machine-Learning Assisted Design of Reconfigurable Intelligent Surfaces)
+                University of Kaiserslautern, Germany (Title: Machine-Learning Assisted Design of Reconfigurable
+                Intelligent Surfaces)
             </td>
         </tr>
         <tr>
@@ -691,7 +798,8 @@
                 <div class="keynote-name">
                     Aparajita Bandyopadhyay
                 </div>
-                Indian Institute of Technology, Delhi, India (Title: Optical and THz sensing provide objective and senstive assessment of degradation in marble heritage structure)
+                Indian Institute of Technology, Delhi, India (Title: Optical and THz sensing provide objective and
+                senstive assessment of degradation in marble heritage structure)
             </td>
         </tr>
         <tr>
@@ -699,7 +807,8 @@
                 <div class="keynote-name">
                     Kosuke Murate
                 </div>
-                Nagoya University, Japan (Title: Spectroscopic Terahertz Imaging using Parametric Generation and Detection)
+                Nagoya University, Japan (Title: Spectroscopic Terahertz Imaging using Parametric Generation and
+                Detection)
             </td>
         </tr>
         <tr>
@@ -707,7 +816,7 @@
                 <div class="keynote-name">
                     Felix Hernandez
                 </div>
-                 University of São Paulo, Brazil (Title: Magneto-Terahertz Spectroscopy of Correlated Magnetic Materials)
+                University of São Paulo, Brazil (Title: Magneto-Terahertz Spectroscopy of Correlated Magnetic Materials)
             </td>
         </tr>
         <tr>
@@ -715,7 +824,8 @@
                 <div class="keynote-name">
                     Tom Siday
                 </div>
-                 University of Birmingham, UK (Title: Subcycle terahertz microscopy: how to reach the smallest spatial scales)
+                University of Birmingham, UK (Title: Subcycle terahertz microscopy: how to reach the smallest spatial
+                scales)
             </td>
         </tr>
         <tr>
@@ -723,7 +833,7 @@
                 <div class="keynote-name">
                     Berardi Sensale-Rodriguez
                 </div>
-                 University of Utah, Salt-Lake City, USA (Title: Structured THz light with diffractive optical networks)
+                University of Utah, Salt-Lake City, USA (Title: Structured THz light with diffractive optical networks)
             </td>
         </tr>
         <tr>
@@ -731,7 +841,7 @@
                 <div class="keynote-name">
                     Shaghik Atakaramians
                 </div>
-                 UNSW Sydney, Australia (Title: Hybrid Waveguides for Ultra‑Wideband Terahertz Beam Engineering)
+                UNSW Sydney, Australia (Title: Hybrid Waveguides for Ultra‑Wideband Terahertz Beam Engineering)
             </td>
         </tr>
         <tr>
@@ -739,7 +849,8 @@
                 <div class="keynote-name">
                     Michael Ruggiero
                 </div>
-                 University of Rochester, USA (Title: When Vibrations Become Chemistry: Terahertz Phonons Dictate Reactivity in Organic Materials)
+                University of Rochester, USA (Title: When Vibrations Become Chemistry: Terahertz Phonons Dictate
+                Reactivity in Organic Materials)
             </td>
         </tr>
         <tr>
@@ -747,7 +858,7 @@
                 <div class="keynote-name">
                     Tyler Cocker
                 </div>
-                 Michigan State University, USA (Title: Atomic-scale terahertz time-domain spectroscopy)
+                Michigan State University, USA (Title: Atomic-scale terahertz time-domain spectroscopy)
             </td>
         </tr>
         <tr>
@@ -755,7 +866,8 @@
                 <div class="keynote-name">
                     Mona Jarrahi
                 </div>
-                 University of California Los Angeles, USA (Title: Monolithically integrated terahertz optoelectronics enabled by gain-enhanced photomixing in quantum well heterostructures)
+                University of California Los Angeles, USA (Title: Monolithically integrated terahertz optoelectronics
+                enabled by gain-enhanced photomixing in quantum well heterostructures)
             </td>
         </tr>
         <tr>
@@ -763,7 +875,7 @@
                 <div class="keynote-name">
                     Suresh Venkatesh
                 </div>
-                 NC State University, USA (Title: CMOS platforms for Sub-THz wavefront generation and manipulation)
+                NC State University, USA (Title: CMOS platforms for Sub-THz wavefront generation and manipulation)
             </td>
         </tr>
         <tr>
@@ -771,7 +883,8 @@
                 <div class="keynote-name">
                     Pernille Klarskov Hansen
                 </div>
-                 Aarhus University, Denmark (Title: Terahertz Time‑Domain Spectroscopy for Plastic Classification in Waste Sorting and Recycling)
+                Aarhus University, Denmark (Title: Terahertz Time‑Domain Spectroscopy for Plastic Classification in
+                Waste Sorting and Recycling)
             </td>
         </tr>
         <tr>
@@ -779,7 +892,8 @@
                 <div class="keynote-name">
                     James Lloyd-Hughes
                 </div>
-                 University of Warwick, UK (Title: Advanced photoconductive THz devices for time-domain spectroscopy, imaging and ellipsometry)
+                University of Warwick, UK (Title: Advanced photoconductive THz devices for time-domain spectroscopy,
+                imaging and ellipsometry)
             </td>
         </tr>
         <tr>
@@ -787,7 +901,7 @@
                 <div class="keynote-name">
                     Henry Everitt
                 </div>
-                 US Army DEVCOM, USA (Title: QCL-pumped molecular THz lasers)
+                US Army DEVCOM, USA (Title: QCL-pumped molecular THz lasers)
             </td>
         </tr>
         <tr>
@@ -795,24 +909,27 @@
                 <div class="keynote-name">
                     David Citrin
                 </div>
-                 Georgia Tech, USA (Title: Enhanced terahertz nondestructive evaluation of materials)
+                Georgia Tech, USA (Title: Enhanced terahertz nondestructive evaluation of materials)
             </td>
         </tr>
-        </table>
+    </table>
 
-<h3 id="student-awards">Student Awards</h3>
-<div class="info-card" style="border-left: 5px solid #003366; background-color: #f0f4f8; padding: 15px; border-radius: 4px;">
-    <p>
-        Supported by a generous contribution from <strong>Swiss Terahertz</strong>, OTST 2026 is pleased to announce two awards for excellence in student presentations:
-    </p>
-    <ul>
-        <li><strong>Best Student Talk:</strong> $1,000 USD</li>
-        <li><strong>Runner-up Best Student Talk:</strong> $500 USD</li>
-    </ul>
-    <p>
-        Eligible presentations will be evaluated by the Technical Committee based on scientific rigor, innovation in terahertz methodology, and clarity of delivery.
-    </p>
-</div>
+    <h3 id="student-awards">Student Awards</h3>
+    <div class="info-card"
+        style="border-left: 5px solid #003366; background-color: #f0f4f8; padding: 15px; border-radius: 4px;">
+        <p>
+            Supported by a generous contribution from <strong>Swiss Terahertz</strong>, OTST 2026 is pleased to announce
+            two awards for excellence in student presentations:
+        </p>
+        <ul>
+            <li><strong>Best Student Talk:</strong> $1,000 USD</li>
+            <li><strong>Runner-up Best Student Talk:</strong> $500 USD</li>
+        </ul>
+        <p>
+            Eligible presentations will be evaluated by the Technical Committee based on scientific rigor, innovation in
+            terahertz methodology, and clarity of delivery.
+        </p>
+    </div>
 
     <h3>Conference Schedule Overview</h3>
     <table class="schedule">
@@ -837,7 +954,7 @@
                 <td>Invited Talks</td>
                 <td>JB Duke Hotel</td>
             </tr>
-             <tr>
+            <tr>
                 <td>Tuesday, April 14, 2026</td>
                 <td>8:00 AM - 5:30 PM</td>
                 <td>Invited Talks</td>
@@ -849,7 +966,7 @@
                 <td>Invited Talks</td>
                 <td>JB Duke Hotel</td>
             </tr>
-             <tr>
+            <tr>
                 <td>Thursday, April 16, 2026</td>
                 <td>8:00 AM - 5:30 PM</td>
                 <td>Invited Talks</td>
@@ -873,7 +990,7 @@
     <h3>Social Events</h3>
     <ul>
         <li>
-            <strong>Conference Banquet:</strong> Wednesday evening at the Washington Duke Inn. 
+            <strong>Conference Banquet:</strong> Wednesday evening at the Washington Duke Inn.
             Please note that attendance is limited to guests who have purchased a banquet ticket.
         </li>
     </ul>
@@ -888,4 +1005,5 @@
     </footer>
 
 </body>
+
 </html>
