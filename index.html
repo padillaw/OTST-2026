@@ -45,13 +45,17 @@
         }
         
         /* Tiered Scaling */
-        /* Platinum remains the largest focal point */
         .platinum img { max-height: 150px; width: auto; }
         
-        /* Unified size for lower tiers to ensure legibility */
         .gold img, 
         .silver img, 
         .bronze img { max-height: 110px; width: auto; }
+
+        /* Targeted scaling for wide aspect-ratio logos to balance visual weight */
+        .silver img.wide-logo {
+            max-height: 60px;
+            width: auto;
+        }
     </style>
 </head>
 
@@ -137,6 +141,9 @@
     <div class="sponsor-container silver">
         <a href="https://dmi.duke.edu/" target="_blank">
             <img src="assets/dmi.jpg" alt="DMI Duke">
+        </a>
+        <a href="https://lightcon.com/" target="_blank">
+            <img src="assets/LC_logo_RGB.jpg" alt="Light Conversion" class="wide-logo">
         </a>
     </div>
 
